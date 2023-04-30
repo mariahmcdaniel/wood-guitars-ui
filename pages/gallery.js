@@ -12,7 +12,7 @@ const GalleryHome = ( {completedProjects, error} ) => {
   return (
     <Layout>
       <div className="flex flex-col">
-        <h1 className="self-center text-7xl bg-yellow-700 bg-opacity-30 mb-10 p-2">Gallery</h1>
+        <h1 className="self-center text-7xl bg-yellow-700 bg-opacity-30 mb-10 p-2">Project Gallery</h1>
       </div>
       <section className="flex flex-col">
       <p className="flex flex-col mb-20 self-center rounded-lg ring-2 ring-green-500 p-5 ml-14 text-center text-2xl bg-green-700 bg-opacity-20">A sampling of completed instruments and a glimpse into the build process.</p>
