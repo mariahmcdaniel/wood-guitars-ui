@@ -20,21 +20,21 @@ export default function Nav(){
     <ul className={styles.navTabs}>
       <li className={styles.navItem}>
         <Link
-          href="/gallery/main"
+          href="/gallery"
         >
           Gallery | 
         </Link>
       </li>
       <li className={styles.navItem}>
         <Link
-          href="/about/info"
+          href="/about"
         >
           About | 
         </Link>
       </li>
       <li className={styles.navItem}>
         <Link
-          href="/shop/order"
+          href="/order"
         >
           Order | 
         </Link>

@@ -1,9 +1,14 @@
-import Link from "next/link";
-import Script from "next/script";
 import Layout from "@/components/layout";
 import Image from "next/image";
+import axios from 'axios';
 
-export default function GalleryHome(){
+
+
+
+const GalleryHome = ( {completedProjects, error} ) => {
+  if (error) {
+    return <div>An error occured: {error.message}</div>;
+  }
   return (
     <Layout>
       <div className="flex flex-col">
@@ -13,17 +18,28 @@ export default function GalleryHome(){
       <p className="flex flex-col mb-20 self-center rounded-lg ring-2 ring-green-500 p-5 ml-14 text-center text-2xl bg-green-700 bg-opacity-20">A sampling of completed instruments and a glimpse into the build process.</p>
       </section>
       <div className="flex content-center">
-      <Image
-        src="/images/birchparlor.jpg"
-        className="mb-3 justify-self-center"
-        height={600}
-        width={600}
-        alt="birch parlor"
-      />
-      <p className="self-center mb-5 text-lg">Parlor guitar made from flamed birch wood with a finger board inlaid with hand-cut mother of pearl and abalone featuring lily of the valley flowers</p>
-
+        {completedProjects.data.map(completedProject => (
+          <div key={completedProject.id}>
+          <h3 key={completedProject.id}>{completedProject.attributes.name}</h3>
+          <Image src={`/images/${completedProject.attributes.src}`} height={500} width={500} alt={completedProject.attributes.name} />
+          <p>{completedProject.attributes.description}</p>
+          </div>
+        ))}
       </div>
 
     </Layout>
   ); 
-}
+};
+
+GalleryHome.getInitialProps = async ctx => {
+  try{
+    const res = await axios.get("http://localhost:1337/api/completed-projects?populate=*");
+    const completedProjects = res.data;
+    console.log(completedProjects);
+    return { completedProjects };
+  } catch (error){
+    return { error };
+  }
+};
+
+export default GalleryHome;
