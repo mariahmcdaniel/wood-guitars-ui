@@ -3,6 +3,31 @@ import Image from "next/image";
 // import axios from 'axios';
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
+import ClientOnly from "@/components/ClientOnly";
+import CompletedProjects from "@/components/CompletedProjects";
+
+// function fetchDate(d) {
+//   const newDate = new Date(d);
+
+//   const day = newDate.getDate();
+//   const month = newDate.getMonth();
+//   const year = newDate.getFullYear();
+
+//   return [day, month, year];
+// };
+
+export default function GalleryHome() {
+
+  return (
+    <Layout>
+      <h1>Gallery of Completed Work</h1>
+      <ClientOnly>
+        <CompletedProjects />
+      </ClientOnly>
+    </Layout>
+  );
+  
+}
 
 
 
