@@ -38,12 +38,12 @@ export default function CompletedProjects() {
 
     return (
         <>
-            {completedProjects.map((project) => (
-                <div key={project.data.attributes.name}>
-                  <h3>{project.data.attributes.name}</h3>
-                    <p>{project.data.attributes.description}</p>
-                    <p>Build Number:{project.data.attributes.buildNumber} - Completed {project.data.attributes.date}</p>
-                    <Image src={`/images/${project.data.attributes.src}`} height={500} width={500} alt={project.data.attributes.name}/>
+            {completedProjects.data.map((project) => (
+                <div key={project.attributes.name}>
+                  <h3>{project.attributes.name}</h3>
+                    <p>{project.attributes.description}</p>
+                    <p>Build Number:{project.attributes.buildNumber} - Completed {project.attributes.date}</p>
+                    <Image src={`/images/${project.attributes.src}`} height={500} width={500} alt={project.attributes.name}/>
                 </div>
             ))}
         </>
