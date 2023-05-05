@@ -9,29 +9,25 @@ import styled from "styled-components";
 const inter = Inter({ subsets: ['latin'] })
 
 const H1 = styled.h1`
-font-size: clamp(.9rem, 4vw, 1.3rem);
+font-size: clamp(1.4rem, 4vw, 1.8rem);
 color: #56765D;
-display: inline-block;
+display: flex;
+justify-content:center;
 padding: calc(10px + 2vw);
-` 
+text-align: center;
+`; 
 
 export default function Home() {
   return (
     <Layout home>
-    <div className="mb-30 homeContainer place-content-center flex-col self-center items-center justify-items-center">
-      <div className="flex flex-col self-center">
+    <div>
+      <div>
       <H1><span>Eric Wood</span>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; <span className={utilStyles.master}>Master Luthier</span></H1>
     </div>        
-    <div
-      className="relative flex ml-8 overflow-hidden rounded-lg bg-cover bg-no-repeat p-10 text-center mb-30"
-      style={{ [ "background-image" ]: "url(/images/woodGrain.jpg)" , ["min-height"]: "800px" }}
-      >
-      <div
-        className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-        style={{ [ "background-color" ]: "rgba(0, 0, 0, 0.6)" }}
-        >
-        <div className="flex h-full self-center items-center justify-center">
-          <div className="flex flex-col self-center items-center justify-center text-white">
+    <div style={{ [ "background-image" ]: "url(/images/woodGrain.jpg)" , ["min-height"]: "800px" }}>
+      <div style={{ [ "background-color" ]: "rgba(0, 0, 0, 0.6)" }}>
+        <div>
+          <div>
             <Image 
               priority
               src="/images/parlor.png"
