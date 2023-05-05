@@ -48,13 +48,7 @@ export default function Home() {
               width={200}
               alt=""
             />
-            <H4>Happiness is beneficial for the body, but it is grief that develops the powers of the mind. The voyage of discovery is not in seeking new landscapes but in having new eyes. Love is a reciprocal torture. If a little dreaming is dangerous, the cure for it is not to dream less but to dream more, to dream all the time.</H4>
-            <button
-              type="button"
-              data-te-ripple-init
-              data-te-ripple-color="light">
-              - Marcel Proust {' '}
-            </button>
+            <H4>Happiness is beneficial for the body, but it is grief that develops the powers of the mind. The voyage of discovery is not in seeking new landscapes but in having new eyes. Love is a reciprocal torture. If a little dreaming is dangerous, the cure for it is not to dream less but to dream more, to dream all the time. - Marcel Proust</H4>
           </Div>
         </div>
       </div>
