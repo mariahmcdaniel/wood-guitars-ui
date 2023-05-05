@@ -24,10 +24,10 @@ export default function Info(){
         width={558}
         alt=""
               />
-      <div className="self-center p-14 bg-yellow-700 bg-opacity-20">
-      <h2 className="self-center mb-5">my bio...</h2>
-      <h2 className="self-center mb-5">How I started building:</h2>
-      <h2 className="self-center">other interests:</h2>
+      <div>
+      <h2>my bio...</h2>
+      <h2>How I started building:</h2>
+      <h2>other interests:</h2>
       </div>
       </div>
     </Layout>
