@@ -3,6 +3,7 @@ import { validateEmail } from '@/utils/helpers';
 import emailjs from '@emailjs/browser';
 import Script from 'next/script';
 import Layout from '@/components/layout';
+import { useForm } from "react-hook-form";
 
 function Form() {
   const form = useRef();
