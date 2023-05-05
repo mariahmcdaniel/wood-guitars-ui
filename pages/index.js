@@ -4,15 +4,23 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Layout from '@/components/layout'
 import utilStyles from '@/styles/utils.module.css'
+import styled from "styled-components";
 
 const inter = Inter({ subsets: ['latin'] })
+
+const H1 = styled.h1`
+font-size: clamp(.9rem, 4vw, 1.3rem);
+color: #56765D;
+display: inline-block;
+padding: calc(10px + 2vw);
+` 
 
 export default function Home() {
   return (
     <Layout home>
     <div className="mb-30 homeContainer place-content-center flex-col self-center items-center justify-items-center">
       <div className="flex flex-col self-center">
-      <h2 className="mt-10 self-center mb-20 text-4xl font-semibold"><span className={utilStyles.eric}>Eric Wood</span>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; <span className={utilStyles.master}>Master Luthier</span></h2>
+      <H1><span>Eric Wood</span>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; <span className={utilStyles.master}>Master Luthier</span></H1>
     </div>        
     <div
       className="relative flex ml-8 overflow-hidden rounded-lg bg-cover bg-no-repeat p-10 text-center mb-30"
