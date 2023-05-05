@@ -6,6 +6,10 @@ import Layout from '@/components/layout';
 import { useForm } from "react-hook-form";
 
 function Form() {
+
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+
   const form = useRef();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
