@@ -1,11 +1,21 @@
 import Layout from "@/components/layout"
 import Image from "next/image"
+import styled from "styled-components";
+
+const H1 = styled.h1`
+font-size: clamp(1.4rem, 4vw, 1.8rem);
+color: #56765D;
+display: flex;
+justify-content:center;
+padding: calc(10px + 2vw);
+text-align: center;
+`; 
 
 export default function Info(){
   return(
     <Layout>
-      <div className="flex flex-col justify-center">
-      <h1 className="self-center text-7xl text-center bg-yellow-700 bg-opacity-30 mb-10">About Me</h1>
+      <div>
+      <H1>About Me</H1>
       <Image 
         priority
         src="/images/ericPhoto.jpg"
