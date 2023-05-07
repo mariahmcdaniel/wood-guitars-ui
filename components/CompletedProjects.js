@@ -7,7 +7,7 @@ const Div = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-border: 2px solid #D9E3DB;
+border: 2px solid #B4D3BA;
 margin: 30px;
 padding: 20px;
 `

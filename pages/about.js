@@ -11,10 +11,21 @@ padding: calc(10px + 2vw);
 text-align: center;
 `; 
 
+const Div = styled.div`
+display: flex;
+flex-direction: column;
+align-items:center;
+padding: 20px;
+`
+const DivSub = styled.div`
+margin-top: 20px;
+margin-bottom: 20px;
+`
+
 export default function Info(){
   return(
     <Layout>
-      <div>
+      <Div>
       <H1>About Me</H1>
       <Image 
         priority
@@ -24,12 +35,12 @@ export default function Info(){
         width={558}
         alt=""
               />
-      <div>
+      <DivSub>
       <h2>my bio...</h2>
       <h2>How I started building:</h2>
       <h2>other interests:</h2>
-      </div>
-      </div>
+      </DivSub>
+      </Div>
     </Layout>
   )
 }
