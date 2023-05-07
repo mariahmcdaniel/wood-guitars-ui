@@ -8,6 +8,9 @@ display: flex;
 flex-direction: column;
 align-items: center;
 `
+const Paragraph = styled.p`
+max-width: calc(80vw);
+` 
 
 const QUERY = gql`
   query AllCompletedProjects {
@@ -48,8 +51,8 @@ export default function CompletedProjects() {
             {completedProjects.data.map((project) => (
                 <Div key={project.attributes.name}>
                   <h3>{project.attributes.name}</h3>
-                    <p>{project.attributes.description}</p>
-                    <p>Build Number:{project.attributes.buildNumber} - Completed {project.attributes.date}</p>
+                    <Paragraph>{project.attributes.description}</Paragraph>
+                    <Paragraph>Build Number:{project.attributes.buildNumber} - Completed {project.attributes.date}</Paragraph>
                     <Image src={`/images/${project.attributes.src}`} height={500} width={500} alt={project.attributes.name}/>
                 </Div>
             ))}
