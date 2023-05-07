@@ -5,6 +5,7 @@ import { gql } from "@apollo/client";
 import client from "../apollo-client";
 import ClientOnly from "@/components/ClientOnly";
 import CompletedProjects from "@/components/CompletedProjects";
+import styled from "styled-components";
 
 // function fetchDate(d) {
 //   const newDate = new Date(d);
@@ -16,11 +17,20 @@ import CompletedProjects from "@/components/CompletedProjects";
 //   return [day, month, year];
 // };
 
+const H1 = styled.h1`
+font-size: clamp(1.4rem, 4vw, 1.8rem);
+color: #56765D;
+display: flex;
+justify-content:center;
+padding: calc(10px + 2vw);
+text-align: center;
+`; 
+
 export default function GalleryHome() {
 
   return (
     <Layout>
-      <h1>Gallery of Completed Work</h1>
+      <H1>Gallery of Completed Work</H1>
       <ClientOnly>
         <CompletedProjects />
       </ClientOnly>
