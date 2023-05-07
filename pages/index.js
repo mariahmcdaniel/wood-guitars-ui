@@ -44,7 +44,7 @@ export default function Home() {
             <Image 
               priority
               src="/images/parlor.png"
-              height={200}
+              height={368}
               width={200}
               alt=""
             />

@@ -1,6 +1,13 @@
 import { useQuery, gql } from "@apollo/client";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import styled from "styled-components";
+
+const Div = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
 
 const QUERY = gql`
   query AllCompletedProjects {
@@ -39,12 +46,12 @@ export default function CompletedProjects() {
     return (
         <>
             {completedProjects.data.map((project) => (
-                <div key={project.attributes.name}>
+                <Div key={project.attributes.name}>
                   <h3>{project.attributes.name}</h3>
                     <p>{project.attributes.description}</p>
                     <p>Build Number:{project.attributes.buildNumber} - Completed {project.attributes.date}</p>
                     <Image src={`/images/${project.attributes.src}`} height={500} width={500} alt={project.attributes.name}/>
-                </div>
+                </Div>
             ))}
         </>
     )
