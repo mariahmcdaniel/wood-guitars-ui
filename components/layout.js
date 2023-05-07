@@ -18,7 +18,7 @@ export default function Layout({ children }) {
        
       </Head>
       <Nav />
-      <div className="container self-center mb-40">
+      <div>
       
       <main>{children}</main>
 

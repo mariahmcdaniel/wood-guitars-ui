@@ -7,9 +7,14 @@ const Div = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+border: 2px solid #D9E3DB;
+margin: 30px;
+padding: 20px;
 `
 const Paragraph = styled.p`
 max-width: calc(80vw);
+margin-top: 10px;
+margin-bottom: 10px;
 ` 
 
 const QUERY = gql`
