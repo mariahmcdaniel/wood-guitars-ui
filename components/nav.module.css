@@ -21,6 +21,7 @@ padding: 20px 40px;
 
 .navTabs {
   display: flex;
+  text-decoration: none;
   /* justify-content: flex-end;
   align-items: end; */
 }
@@ -28,4 +29,5 @@ padding: 20px 40px;
 .navItem {
   margin: 4px;
   font-size: 1.5rem;
+  text-decoration: none;
 }
