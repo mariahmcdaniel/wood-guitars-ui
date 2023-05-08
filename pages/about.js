@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const H1 = styled.h1`
 font-size: clamp(1.4rem, 4vw, 1.8rem);
-color: #56765D;
+color: #E6FCD6;
 display: flex;
 justify-content:center;
 padding: calc(10px + 2vw);
