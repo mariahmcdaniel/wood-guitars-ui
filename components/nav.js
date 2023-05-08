@@ -1,20 +1,40 @@
 import Image from 'next/image';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import styles from './nav.module.css';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
+display: flex;
 list-style-type:none;
 `
 
 const Li = styled.li`
+margin: 4px;
+font-size: 1.5rem;
 text-decoration: none;
+`
+const NavCont = styled.div`
+border-radius: 0px 0px 20px 20px;
+background: linear-gradient(145deg, #764d1e, #8c5b23);
+box-shadow:  20px 20px 60px #6f481c,
+             -20px -20px 60px #976226;
+             padding: 20px 40px;
+min-width: 100vw;
+min-height: auto;
+margin-bottom: 50px;
+padding: 20px 40px;
+`
+const DivR = styled.div`
+display:flex;
+justify-content: flex-end;
+`
+const DivC = styled.div`
+display:flex
 `
 
 export default function Nav(){
   return (
-    <div className={styles.navContainer}>
+    <NavCont>
       <Link href="/"><Image
               priority
               src="/images/woodLogo1.jpeg"
@@ -23,46 +43,46 @@ export default function Nav(){
               width={144}
               alt=""
             /></Link>
-    <div className={styles.navRow}>
+    <DivR>
       
-      <div className={styles.navCol}>
-    <Ul className={styles.navTabs}>
-      <Li className={styles.navItem}>
+      <DivC>
+    <Ul>
+      <Li>
         <Link
           href="/gallery"
         >
           Gallery | 
         </Link>
       </Li>
-      <Li className={styles.navItem}>
+      <Li>
         <Link
           href="/about"
         >
           About | 
         </Link>
       </Li>
-      <Li className={styles.navItem}>
+      <Li>
         <Link
           href="/order"
         >
           Order | 
         </Link>
       </Li>
-      <Li className={styles.navItem}>
+      <Li>
         <Link
           href="/contact"
         >
           Contact |
         </Link>
       </Li>
-      <Li className={styles.navItem}>
+      <Li>
         <Link
           href="/contact"
         >
           Login/Register |
         </Link>
       </Li>
-      <Li className={styles.navItem}>
+      <Li>
         <Link
           href="/contact"
         >
@@ -70,8 +90,8 @@ export default function Nav(){
         </Link>
       </Li>
     </Ul>
-    </div>
-    </div>
-    </div>
+    </DivC>
+    </DivR>
+    </NavCont>
   )
 }
