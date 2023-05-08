@@ -52,7 +52,21 @@ export default function Nav(){
         <Link
           href="/contact"
         >
-          Contact
+          Contact |
+        </Link>
+      </Li>
+      <Li className={styles.navItem}>
+        <Link
+          href="/contact"
+        >
+          Login/Register |
+        </Link>
+      </Li>
+      <Li className={styles.navItem}>
+        <Link
+          href="/contact"
+        >
+          Logout
         </Link>
       </Li>
     </Ul>

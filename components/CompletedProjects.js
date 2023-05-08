@@ -23,7 +23,7 @@ const QUERY = gql`
     data {
       attributes {
         name
-        buildNumber
+        build_number
         date
         description
         src
@@ -57,7 +57,7 @@ export default function CompletedProjects() {
                 <Div key={project.attributes.name}>
                   <h3>{project.attributes.name}</h3>
                     <Paragraph>{project.attributes.description}</Paragraph>
-                    <Paragraph>Build Number:{project.attributes.buildNumber} - Completed {project.attributes.date}</Paragraph>
+                    <Paragraph>Build Number:{project.attributes.build_number} - Completed {project.attributes.date}</Paragraph>
                     <Image src={`/images/${project.attributes.src}`} height={500} width={500} alt={project.attributes.name}/>
                 </Div>
             ))}
