@@ -77,14 +77,14 @@ export default function Nav(){
       </Li>
       <Li>
         <Link
-          href="/contact"
+          href="/"
         >
           Login/Register |
         </Link>
       </Li>
       <Li>
         <Link
-          href="/contact"
+          href="/"
         >
           Logout
         </Link>
