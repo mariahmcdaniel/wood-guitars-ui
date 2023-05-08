@@ -17,6 +17,11 @@ margin-top: 10px;
 margin-bottom: 10px;
 ` 
 
+const H3 = styled.h3`
+color:#B4D3BA; 
+font-size: 30px;
+`
+
 const QUERY = gql`
   query AllCompletedProjects {
   completedProjects {
@@ -55,7 +60,7 @@ export default function CompletedProjects() {
         <>
             {completedProjects.data.map((project) => (
                 <Div key={project.attributes.name}>
-                  <h3>{project.attributes.name}</h3>
+                  <H3>{project.attributes.name}</H3>
                     <Paragraph>{project.attributes.description}</Paragraph>
                     <Paragraph>Build Number:{project.attributes.build_number} - Completed {project.attributes.date}</Paragraph>
                     <Image src={`/images/${project.attributes.src}`} height={500} width={500} alt={project.attributes.name}/>
