@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Nav from './nav';
+import styles from './layout.module.css';
 
 
 export const siteTitle = 'Eric-Wood-Guitars';
@@ -20,7 +21,7 @@ export default function Layout({ children }) {
       <Nav />
       <div>
       
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
 
       </div>
       </div>

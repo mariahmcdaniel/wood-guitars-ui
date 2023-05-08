@@ -10,8 +10,11 @@ list-style-type:none;
 
 const Li = styled.li`
 margin: 4px;
-font-size: 1.5rem;
+font-size: 1.3rem;
 text-decoration: none;
+background-color:#e6fcd640;
+padding:4px 8px;
+border-radius: 3px;
 `
 const NavCont = styled.div`
 border-radius: 0px 0px 20px 20px;
@@ -21,7 +24,7 @@ box-shadow:  20px 20px 60px #6f481c,
              padding: 20px 40px;
 min-width: 100vw;
 min-height: auto;
-margin-bottom: 50px;
+margin-bottom: 20px;
 padding: 20px 40px;
 `
 const DivR = styled.div`
@@ -51,35 +54,35 @@ export default function Nav(){
         <Link
           href="/gallery"
         >
-          Gallery | 
+          Gallery 
         </Link>
       </Li>
       <Li>
         <Link
           href="/about"
         >
-          About | 
+          About 
         </Link>
       </Li>
       <Li>
         <Link
           href="/order"
         >
-          Order | 
+          Order 
         </Link>
       </Li>
       <Li>
         <Link
           href="/contact"
         >
-          Contact |
+          Contact
         </Link>
       </Li>
       <Li>
         <Link
           href="/"
         >
-          Login/Register |
+          Login/Register
         </Link>
       </Li>
       <Li>

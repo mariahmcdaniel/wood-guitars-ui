@@ -9,8 +9,8 @@ import styled from "styled-components";
 const inter = Inter({ subsets: ['latin'] })
 
 const H1 = styled.h1`
-font-size: clamp(1.4rem, 4vw, 1.8rem);
-color: #56765D;
+font-size: clamp(1.8rem, 4vw, 2.9rem);
+color: #E6FCD6;
 display: flex;
 justify-content:center;
 padding: calc(10px + 2vw);
@@ -29,15 +29,18 @@ margin-bottom: 10px;
 color:#D9E3DB;
 text-align: center;
 `
+const Sp = styled.span`
+color:#764d1e;
+`
 
 export default function Home() {
   return (
     <Layout home>
     <div>
       <div>
-      <H1><span>Eric Wood</span>&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; <span className={utilStyles.master}>Master Luthier</span></H1>
-    </div>        
-    <div style={{ [ "background-image" ]: "url(/images/woodGrain.jpg)" , ["min-height"]: "800px" }}>
+      <H1><span>Eric Wood</span>&nbsp;&nbsp;&nbsp;&nbsp; <Sp>|&nbsp;&nbsp;&nbsp;&nbsp;</Sp> <span className={utilStyles.master}>Master Luthier</span></H1>
+      </div>        
+    <Div style={{ [ "background-image" ]: "url(/images/woodGrain.jpg)" , ["min-height"]: "400px" }}>
       <div style={{ [ "background-color" ]: "rgba(0, 0, 0, 0.6)" }}>
         <div>
           <Div>
@@ -52,7 +55,7 @@ export default function Home() {
           </Div>
         </div>
       </div>
-    </div>
+    </Div>
     </div>
     
   </Layout>

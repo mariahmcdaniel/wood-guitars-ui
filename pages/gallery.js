@@ -18,19 +18,26 @@ import styled from "styled-components";
 // };
 
 const H1 = styled.h1`
-font-size: clamp(1.4rem, 4vw, 1.8rem);
-color: #56765D;
+font-size: clamp(1.8rem, 4vw, 2.7rem);
+color:  #E6FCD6;
 display: flex;
 justify-content:center;
 padding: calc(10px + 2vw);
 text-align: center;
 `; 
 
+const P = styled.p`
+display:flex;
+justify-content: center;
+color: rgb(13, 69, 39);
+`
+
 export default function GalleryHome() {
 
   return (
     <Layout>
-      <H1>Gallery of Completed Work</H1>
+      <H1>Instrument Gallery</H1>
+      <P>A selection of guitars built by Eric Wood</P>
       <ClientOnly>
         <CompletedProjects />
       </ClientOnly>
