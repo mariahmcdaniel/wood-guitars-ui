@@ -3,9 +3,13 @@ import { useMutation } from "@apollo/client";
 import Auth from "@/utils/auth";
 import ADD_USER from "@/utils/mutations";
 
-export default function App() {
+export default function Register() {
+  const [addUser, { error }] = useMutation(ADD_USER);
   const { register, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    console.log(data);
+  }
+  
    
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
