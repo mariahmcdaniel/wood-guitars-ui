@@ -6,6 +6,7 @@ export default function App() {
    
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-control">
       <input {...register("firstName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
@@ -14,6 +15,8 @@ export default function App() {
         message: <p style={{ color: "red" }}>Please ensure that you have entered a valid first name.</p>
         }
       })} />
+      </div>
+      <div className="form-control">
       <input {...register("lastName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
@@ -22,6 +25,8 @@ export default function App() {
         message: <p style={{ color: "red" }}>Please ensure that you have entered a valid last name.</p>
         }
       })} />
+      </div>
+      <div className="form-control">
       <input {...register("username", { 
         required: <p style={{ color: "red" }}>Please enter a username.</p>, 
         maxLength: 20, 
@@ -30,6 +35,8 @@ export default function App() {
         message: <p style={{ color: "red" }}>Username must contain 5-16 characters and no spaces. Only letters and . (period) or _ (underscore) are accepted.</p>
         }
       })} />
+      </div>
+      <div className="form-control">
       <input {...register("email", {
         required: <p style={{ color: "red" }}>email is required for registration</p>, 
         pattern: { 
@@ -37,7 +44,7 @@ export default function App() {
         message: <p style={{ color: "red" }}>Please enter a valid email address</p> 
               }
         })} />
-
+      </div>
       <input type="submit" />
     </form>
   );
