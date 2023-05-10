@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useMutation } from "@apollo/client";
-import 
+import Auth from "@/utils/auth";
+import ADD_USER from "@/utils/mutations";
 
 export default function App() {
   const { register, handleSubmit } = useForm();
