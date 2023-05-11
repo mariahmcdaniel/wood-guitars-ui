@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Eric Wood Guitars</title>
 
-        <Link rel="icon" href="/favicon.ico" />
+        {/* <Link rel="icon" href="/favicon.ico" /> */}
        
       </Head>
       <Nav />

@@ -40,8 +40,8 @@ export default function Home() {
       <div>
       <H1><span>Eric Wood</span>&nbsp;&nbsp;&nbsp;&nbsp; <Sp>|&nbsp;&nbsp;&nbsp;&nbsp;</Sp> <span className={utilStyles.master}>Master Luthier</span></H1>
       </div>        
-    <Div style={{ [ "background-image" ]: "url(/images/woodGrain.jpg)" , ["min-height"]: "400px" }}>
-      <div style={{ [ "background-color" ]: "rgba(0, 0, 0, 0.6)" }}>
+    <Div style={{ [ "backgroundImage" ]: "url(/images/woodGrain.jpg)" , ["minHeight"]: "400px" }}>
+      <div style={{ [ "backgroundColor" ]: "rgba(0, 0, 0, 0.6)" }}>
         <div>
           <Div>
             <Image 
