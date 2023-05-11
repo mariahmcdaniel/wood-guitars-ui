@@ -51,6 +51,14 @@ export default function Register() {
         message: <p style={{ color: "red" }}>Please enter a valid email address</p> 
               }
         })} />
+      <input type="password" {...register("password", { 
+        required: <p style={{ color: "red" }}>Password field is required</p>, 
+        maxLength: 20, 
+        pattern: {
+        value: /(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+        message: <p style={{ color: "red" }}>Password must be 8 characters minimum and include at least <span style={{fontWeight: "bold"}}>one of each</span> of the following: uppercase letter, lowercase letter, number, special character (!@#$%^&*).</p>
+        }
+      })} />
       </div>
       <input type="submit" />
     </form>
