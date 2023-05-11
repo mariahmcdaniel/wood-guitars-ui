@@ -62,7 +62,7 @@ export default function Register() {
       <H1>Create an Account</H1>
     <Form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-control">
-        <label>First Name</label>
+        <label>First Name  </label>
         <FormInput {...register("firstName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
@@ -73,7 +73,7 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-        <label>Last Name</label>
+        <label>Last Name  </label>
         <FormInput {...register("lastName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
@@ -84,7 +84,7 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-        <label>Username</label>
+        <label>Username  </label>
         <FormInput {...register("username", { 
         required: <p style={{ color: "red" }}>Please enter a username.</p>, 
         maxLength: 20, 
@@ -95,7 +95,7 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-        <label>Email</label>
+        <label>Email  </label>
         <FormInput {...register("email", {
         required: <p style={{ color: "red" }}>email is required for registration</p>, 
         pattern: { 
@@ -105,7 +105,7 @@ export default function Register() {
         })} />
       </div>
       <div className="form-control">
-        <label>Password</label>
+        <label>Password  </label>
         <FormInput type="password" {...register("password", { 
         required: <p style={{ color: "red" }}>Password field is required</p>, 
         maxLength: 20, 
