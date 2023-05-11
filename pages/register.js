@@ -16,7 +16,8 @@ export default function Register() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-control">
-      <input {...register("firstName", { 
+        <label>First Name</label>
+        <input {...register("firstName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
         pattern: {
@@ -26,7 +27,8 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-      <input {...register("lastName", { 
+        <label>Last Name</label>
+        <input {...register("lastName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
         pattern: {
@@ -36,7 +38,8 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-      <input {...register("username", { 
+        <label>Username</label>
+        <input {...register("username", { 
         required: <p style={{ color: "red" }}>Please enter a username.</p>, 
         maxLength: 20, 
         pattern: {
@@ -46,14 +49,18 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-      <input {...register("email", {
+        <label>Email</label>
+        <input {...register("email", {
         required: <p style={{ color: "red" }}>email is required for registration</p>, 
         pattern: { 
           value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
         message: <p style={{ color: "red" }}>Please enter a valid email address</p> 
               }
         })} />
-      <input type="password" {...register("password", { 
+      </div>
+      <div className="form-control">
+        <label>Password</label>
+        <input type="password" {...register("password", { 
         required: <p style={{ color: "red" }}>Password field is required</p>, 
         maxLength: 20, 
         pattern: {
