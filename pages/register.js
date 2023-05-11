@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import Auth from "@/utils/auth";
-import { newUser } from "@/utils/addUser";
+import { newUser } from "@/utils/strapiAuth";
 import styled from "styled-components";
 import Layout from "@/components/layout"
 import Link from "next/link";

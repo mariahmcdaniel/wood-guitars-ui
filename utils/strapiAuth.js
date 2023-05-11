@@ -18,3 +18,17 @@ export function newUser (firstName, lastName, username, email, password) {
   });
 }
  
+export function authenticateUser (identifier, password){
+  axios
+      .post('http://localhost:1337/auth/local', {
+        identifier: `${identifier}`,
+        password: `${password}`,
+      })
+      .then(response => {
+        console.log('User profile', response.data.user);
+        console.log('User token', response.data.jwt);
+      })
+      .catch(error => {
+        console.log('An error occurred:', error.response);
+      });
+}
