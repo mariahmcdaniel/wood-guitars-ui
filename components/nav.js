@@ -80,9 +80,9 @@ export default function Nav(){
       </Li>
       <Li>
         <Link
-          href="/"
+          href="/register"
         >
-          Login/Register
+          Login/Signup
         </Link>
       </Li>
       <Li>

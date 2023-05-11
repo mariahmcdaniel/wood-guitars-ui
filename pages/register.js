@@ -1,8 +1,51 @@
 import { useForm } from "react-hook-form";
-import { useMutation } from "@apollo/client";
 import Auth from "@/utils/auth";
-import ADD_USER from "@/utils/mutations";
 import { newUser } from "@/utils/addUser";
+import styled from "styled-components";
+import Layout from "@/components/layout"
+import Link from "next/link";
+// import { useMutation } from "@apollo/client";
+// import ADD_USER from "@/utils/mutations";
+
+const Div = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+const H1 = styled.h1`
+font-size: clamp(1.4rem, 4vw, 1.8rem);
+color: #E6FCD6;
+display: flex;
+justify-content:center;
+padding: calc(10px + 2vw);
+text-align: center;
+`; 
+
+const Form = styled.form`
+margin-bottom: 40px;
+font-size: clamp(.8rem, 4vw, 1.2rem);
+border: 2px solid #B4D3BA;
+padding: 50px;
+`
+const Paragraph = styled.p`
+font-size:clamp(.8rem, 4vw, 1.2rem);
+margin-bottom: 30px;
+`
+const StyledLink = styled(Link)`
+background-color: #D0F5B8;
+font-size:clamp(.8rem, 4vw, 1.2rem);
+padding:5px;
+border-radius: 3px;
+margin-left: 3px;
+margin-right:3px;
+`
+const FormInput = styled.input`
+margin-bottom: 20px;
+`
+const SubmitInput = styled.input`
+font-size: clamp(.8rem, 4vw, 1.2rem);
+padding: 8px;
+`
 
 export default function Register() {
   // const [addUser, { error }] = useMutation(ADD_USER);
@@ -14,10 +57,13 @@ export default function Register() {
   
    
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <Layout>
+    <Div>
+      <H1>Create an Account</H1>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-control">
         <label>First Name</label>
-        <input {...register("firstName", { 
+        <FormInput {...register("firstName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
         pattern: {
@@ -28,7 +74,7 @@ export default function Register() {
       </div>
       <div className="form-control">
         <label>Last Name</label>
-        <input {...register("lastName", { 
+        <FormInput {...register("lastName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
         pattern: {
@@ -39,7 +85,7 @@ export default function Register() {
       </div>
       <div className="form-control">
         <label>Username</label>
-        <input {...register("username", { 
+        <FormInput {...register("username", { 
         required: <p style={{ color: "red" }}>Please enter a username.</p>, 
         maxLength: 20, 
         pattern: {
@@ -50,7 +96,7 @@ export default function Register() {
       </div>
       <div className="form-control">
         <label>Email</label>
-        <input {...register("email", {
+        <FormInput {...register("email", {
         required: <p style={{ color: "red" }}>email is required for registration</p>, 
         pattern: { 
           value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
@@ -60,7 +106,7 @@ export default function Register() {
       </div>
       <div className="form-control">
         <label>Password</label>
-        <input type="password" {...register("password", { 
+        <FormInput type="password" {...register("password", { 
         required: <p style={{ color: "red" }}>Password field is required</p>, 
         maxLength: 20, 
         pattern: {
@@ -69,7 +115,10 @@ export default function Register() {
         }
       })} />
       </div>
-      <input type="submit" />
-    </form>
+      <SubmitInput type="submit" />
+    </Form>
+    <Paragraph>Already have an account? <StyledLink href="/login">Login Here</StyledLink></Paragraph>
+    </Div>
+    </Layout>
   );
 }
