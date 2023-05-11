@@ -26,10 +26,13 @@ margin-bottom: 40px;
 font-size: clamp(.8rem, 4vw, 1.2rem);
 border: 2px solid #B4D3BA;
 padding: 50px;
+display: flex;
+flex-direction: column;
+align-items: flex-end; 
 `
 const Paragraph = styled.p`
 font-size:clamp(.8rem, 4vw, 1.2rem);
-margin-bottom: 30px;
+margin-bottom: 100px;
 `
 const StyledLink = styled(Link)`
 background-color: #D0F5B8;
@@ -45,6 +48,8 @@ margin-bottom: 20px;
 const SubmitInput = styled.input`
 font-size: clamp(.8rem, 4vw, 1.2rem);
 padding: 8px;
+margin-top: 14px;
+align-self: center;
 `
 
 export default function Register() {
@@ -62,7 +67,7 @@ export default function Register() {
       <H1>Create an Account</H1>
     <Form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-control">
-        <label>First Name  </label>
+        <label>First Name:  </label>
         <FormInput {...register("firstName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
@@ -73,7 +78,7 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-        <label>Last Name  </label>
+        <label>Last Name: </label>
         <FormInput {...register("lastName", { 
         required: <p style={{ color: "red" }}>Name fields are required</p>, 
         maxLength: 20, 
@@ -84,7 +89,7 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-        <label>Username  </label>
+        <label>Username:  </label>
         <FormInput {...register("username", { 
         required: <p style={{ color: "red" }}>Please enter a username.</p>, 
         maxLength: 20, 
@@ -95,7 +100,7 @@ export default function Register() {
       })} />
       </div>
       <div className="form-control">
-        <label>Email  </label>
+        <label>Email: </label>
         <FormInput {...register("email", {
         required: <p style={{ color: "red" }}>email is required for registration</p>, 
         pattern: { 
@@ -105,7 +110,7 @@ export default function Register() {
         })} />
       </div>
       <div className="form-control">
-        <label>Password  </label>
+        <label>Password:  </label>
         <FormInput type="password" {...register("password", { 
         required: <p style={{ color: "red" }}>Password field is required</p>, 
         maxLength: 20, 
