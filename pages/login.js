@@ -59,6 +59,7 @@ const { register, handleSubmit } = useForm();
 const onSubmit = data => {
     console.log(data);
     Auth.login(authenticateUser(data.username,data.password));
+    console.log("LOGGED IN");
   }
 
 return (
@@ -94,6 +95,5 @@ return (
     </Div>
     </Layout>
 
-)
-
+);
 }
