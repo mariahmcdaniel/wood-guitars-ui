@@ -10,6 +10,13 @@ padding: calc(10px + 2vw);
 text-align: center;
 `; 
 
+const Paragraph = styled.p`
+display: flex;
+justify-content: center;
+padding:30px;
+border: 2px solid #B4D3BA;
+`
+
 export default function Order(){
   return(
     <Layout>
@@ -17,7 +24,7 @@ export default function Order(){
       <H1>Purchase a custom instrument</H1>
       </div>
       <section>
-      <h2>While the ordering system is currently being built- please reach out via e-mail (ericwood208@gmail.com) or instagram (@ericwoodguitars) for more information about purchasing an instrument.</h2>
+      <Paragraph>While the ordering system is currently being built- please reach out via e-mail (ericwood208@gmail.com) or instagram (@ericwoodguitars) for more information about purchasing an instrument.</Paragraph>
       </section>
     </Layout>
   )
