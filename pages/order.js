@@ -15,6 +15,8 @@ display: flex;
 justify-content: center;
 padding:30px;
 border: 2px solid #B4D3BA;
+font-size: clamp(.8rem, 4vw, 1.2rem);
+text-align: center;
 `
 
 export default function Order(){
