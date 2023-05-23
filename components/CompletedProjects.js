@@ -50,7 +50,7 @@ export default function CompletedProjects() {
     if (error) {
         console.error(error);
         return (
-            <h2>Sorry, there's been an error...</h2>
+            <h2>Sorry, there has been an error...</h2>
         );
     };
 
