@@ -3,7 +3,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-    uri: "https://eric-wood-guitars-backend.herokuapp.com/graphql",
+    uri: "mysql://b7xyellb7jzfbm9t:oh9pqozqqgem2szs@l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/jzlh3l230nfnbz3x",
     cache: new InMemoryCache(),
 });
 
