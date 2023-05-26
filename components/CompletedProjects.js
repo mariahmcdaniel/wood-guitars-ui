@@ -32,6 +32,13 @@ const QUERY = gql`
         date
         description
         src
+        images{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
       }
     }
   }
@@ -63,7 +70,7 @@ export default function CompletedProjects() {
                   <H3>{project.attributes.name}</H3>
                     <Paragraph>{project.attributes.description}</Paragraph>
                     <Paragraph>Build Number:{project.attributes.build_number} - Completed {project.attributes.date}</Paragraph>
-                    <Image src={`/images/${project.attributes.src}`} height={500} width={500} alt={project.attributes.name}/>
+                    <Image src={project.attributes.images.data.attributes.url} height={500} width={500} alt={project.attributes.name}/>
                 </Div>
             ))}
         </>
