@@ -6,14 +6,23 @@ import styled from 'styled-components';
 const Ul = styled.ul`
 display: flex;
 list-style-type:none;
+flex-direction:column;
+flex-direction: column;
+margin-left: 40px;
+  @media (min-width: 768px) {
+    display: flex !important;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 `
 
 const Li = styled.li`
 margin: 4px;
-font-size: 1.3rem;
+font-size: clamp(.8rem, 4vw, 1.2rem);
 text-decoration: none;
 background-color:#e6fcd640;
-padding:4px 8px;
+padding: 1vw 1vh;
 border-radius: 3px;
 `
 const NavCont = styled.div`
@@ -22,17 +31,24 @@ background: linear-gradient(145deg, #764d1e, #8c5b23);
 box-shadow:  20px 20px 60px #6f481c,
              -20px -20px 60px #976226;
              padding: 20px 40px;
-min-width: 100vw;
+min-width: fit-content;
 min-height: auto;
 margin-bottom: 20px;
 padding: 20px 40px;
+display: flex;
+@media (min-width: 768px) {
+    display: block !important;
+    margin-right: 30px;
+  }
 `
 const DivR = styled.div`
 display:flex;
 justify-content: flex-end;
+margin:2px;
 `
 const DivC = styled.div`
-display:flex
+display:flex;
+max-width: 75vw;
 `
 
 export default function Nav(){
@@ -47,7 +63,6 @@ export default function Nav(){
               alt=""
             /></Link>
     <DivR>
-      
       <DivC>
     <Ul>
       <Li>
