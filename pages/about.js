@@ -36,9 +36,9 @@ export default function Info(){
         alt=""
               />
       <DivSub>
-      <h2>my bio...</h2>
+      <h2>My bio...</h2>
       <h2>How I started building:</h2>
-      <h2>other interests:</h2>
+      <h2>Other interests:</h2>
       </DivSub>
       </Div>
     </Layout>
