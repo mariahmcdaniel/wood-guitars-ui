@@ -27,7 +27,7 @@ border-radius: 3px;
 `
 const NavCont = styled.div`
 border-radius: 0px 0px 20px 20px;
-background: linear-gradient(145deg, #764d1e, #8c5b23);
+background: linear-gradient(#85A969, #2E2304);
 box-shadow:  20px 20px 60px #6f481c,
              -20px -20px 60px #976226;
              padding: 20px 40px;
