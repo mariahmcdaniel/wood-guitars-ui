@@ -11,7 +11,7 @@ flex-direction: column;
 margin-left: 40px;
   @media (min-width: 768px) {
     display: flex !important;
-    margin-right: 30px;
+    margin-right: 20px;
     flex-direction: row;
     justify-content: flex-end;
   }
@@ -26,7 +26,7 @@ padding: 1vw 1vh;
 border-radius: 3px;
 `
 const NavCont = styled.div`
-border-radius: 0px 0px 20px 20px;
+border-radius: 0px 0px 0px 0px;
 background: linear-gradient(#85A969, #2E2304);
 box-shadow:  20px 20px 60px #6f481c,
              -20px -20px 60px #976226;
@@ -34,11 +34,10 @@ box-shadow:  20px 20px 60px #6f481c,
 min-width: fit-content;
 min-height: auto;
 margin-bottom: 20px;
-padding: 20px 40px;
+padding: 20px 30px;
 display: flex;
 @media (min-width: 768px) {
     display: block !important;
-    margin-right: 30px;
   }
 `
 const DivR = styled.div`
